@@ -9,7 +9,7 @@ is built), computes the optimal rendezvous point with
   * ``~/intercept_point`` (geometry_msgs/PoseStamped) - the rendezvous point.
   * ``~/interception_path`` (nav_msgs/Path) - an acceleration-limited path from
     the interceptor toward the rendezvous, consumable by a tracking controller
-    or the d2dtracker_states FSM/Behaviour-Tree.
+    or the shaheen_states FSM/Behaviour-Tree.
 
 Uses only standard messages so the package stays pure ``ament_python`` (no
 custom rosidl generation, which ament_python cannot do).

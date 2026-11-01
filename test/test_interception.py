@@ -1,7 +1,7 @@
 """Unit tests for the interception strategy library (no ROS runtime needed)."""
-from d2dtracker_interception.interception_modes import (
+from shaheen_guidance.interception_modes import (
     closest_interception_sample, distance2D, interceptor_trajectory)
-from d2dtracker_interception.interception_point import (
+from shaheen_guidance.interception_point import (
     find_optimal_intersection, reach_time)
 
 

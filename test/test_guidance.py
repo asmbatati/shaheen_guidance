@@ -1,7 +1,7 @@
 """Unit tests for the PN guidance library (no ROS runtime needed)."""
 import numpy as np
 
-from d2dtracker_interception.guidance import (
+from shaheen_guidance.guidance import (
     closing_velocity, los_rate, pn_velocity_command, proportional_navigation)
 
 
@@ -52,14 +52,14 @@ def test_pn_velocity_zero_distance():
 
 
 def test_pursuit_flies_line_of_sight_at_speed():
-    from d2dtracker_interception.guidance import pursuit_velocity_command
+    from shaheen_guidance.guidance import pursuit_velocity_command
     v = pursuit_velocity_command([0.0, 0.0, 0.0], [3.0, 4.0, 0.0], speed=5.0)
     assert np.allclose(v, [3.0, 4.0, 0.0])
 
 
 def _engage(law, target_vel, steps=600, dt=0.02, speed=6.0):
     """Kinematic engagement (perfect velocity tracking); returns min range."""
-    from d2dtracker_interception.guidance import (pn_integrated_velocity,
+    from shaheen_guidance.guidance import (pn_integrated_velocity,
                                                   pursuit_velocity_command)
     ip, tp = np.zeros(3), np.array([20.0, -10.0, 0.0])
     tv = np.asarray(target_vel, float)
@@ -83,7 +83,7 @@ def test_integrated_pn_hits_a_crossing_target():
 def test_integrated_pn_flies_straighter_than_pursuit():
     # same speed, crossing target: PN leads the target, pursuit tail-chases;
     # both close, PN by a collision course that needs no terminal turn
-    from d2dtracker_interception.guidance import pn_integrated_velocity
+    from shaheen_guidance.guidance import pn_integrated_velocity
     v = pn_integrated_velocity(None, [0.0, 0.0, 0.0], [0.0, 0.0, 0.0],
                                [10.0, 0.0, 0.0], [0.0, 2.0, 0.0], 6.0)
     assert np.allclose(np.linalg.norm(v), 6.0)

@@ -3,7 +3,7 @@ from glob import glob
 
 from setuptools import find_packages, setup
 
-package_name = 'd2dtracker_interception'
+package_name = 'shaheen_guidance'
 
 setup(
     name=package_name,
@@ -19,13 +19,13 @@ setup(
     zip_safe=True,
     maintainer='asmbatati',
     maintainer_email='asmalbatati@hotmail.com',
-    description='Interception strategies for the D2DTracker project.',
+    description='Rendezvous-point and guidance strategies for drone-to-drone interception.',
     license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'interceptor = d2dtracker_interception.interceptor_node:main',
-            'guidance = d2dtracker_interception.guidance_node:main',
+            'interceptor = shaheen_guidance.interceptor_node:main',
+            'guidance = shaheen_guidance.guidance_node:main',
         ],
     },
 )

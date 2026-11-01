@@ -27,7 +27,7 @@ def generate_launch_description():
         DeclareLaunchArgument('vmax', default_value='8.0'),
         DeclareLaunchArgument('amax', default_value='4.0'),
         Node(
-            package='d2dtracker_interception',
+            package='shaheen_guidance',
             executable='interceptor',
             name='interceptor_node',
             namespace=LaunchConfiguration('namespace'),

@@ -1,5 +1,5 @@
 """Unit tests for the CBF velocity safety filter."""
-from d2dtracker_interception.safety import CBFVelocityFilter
+from shaheen_guidance.safety import CBFVelocityFilter
 import numpy as np
 
 

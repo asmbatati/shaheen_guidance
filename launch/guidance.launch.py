@@ -27,7 +27,7 @@ def generate_launch_description():
         DeclareLaunchArgument('target_odom',
                               default_value='/target/mavros/local_position/odom'),
         Node(
-            package='d2dtracker_interception', executable='guidance',
+            package='shaheen_guidance', executable='guidance',
             name='guidance_node', namespace=LaunchConfiguration('namespace'),
             output='screen',
             parameters=[{

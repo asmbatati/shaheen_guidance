@@ -1,4 +1,4 @@
-# d2dtracker_interception
+# shaheen_guidance
 
 Interception strategy library for the drone-to-drone interception workspace.
 It holds pure-Python geometry and guidance functions (rendezvous point,
@@ -95,7 +95,7 @@ logs a message.
 
 ```bash
 cd ~/drone_interception_ws/ros2_ws
-colcon build --symlink-install --packages-select d2dtracker_interception
+colcon build --symlink-install --packages-select shaheen_guidance
 source install/setup.bash
 ```
 
@@ -110,9 +110,9 @@ export ROS_DOMAIN_ID=77   # must match the sim's ros_domain_id:= (default 77)
 
 ```bash
 # Strategy A: rendezvous point + path
-ros2 launch d2dtracker_interception interceptor.launch.py
+ros2 launch shaheen_guidance interceptor.launch.py
 # Strategy B: Proportional Navigation (flies the interceptor)
-ros2 launch d2dtracker_interception guidance.launch.py nav_gain:=3.0 vmax:=8.0
+ros2 launch shaheen_guidance guidance.launch.py nav_gain:=3.0 vmax:=8.0
 ```
 
 - `interceptor.launch.py`: arguments `interceptor_odom`
@@ -143,10 +143,18 @@ ros2 launch drone_interception_sim pipeline.launch.py planner:=head_on
 `test/` also has the copyright/flake8/pep257 lint tests.
 
 ```bash
-cd ~/drone_interception_ws/ros2_ws/src/d2dtracker_interception
+cd ~/drone_interception_ws/ros2_ws/src/shaheen_guidance
 python3 -m pytest test
 ```
 
 Measured on 30 Oct 2026: 18 passed, 1 skipped, 2 failed. The skip is the
 copyright test (marked skip). The 2 failures are lint, not functional: flake8
 (I100 import order in `setup.py`) and pep257 (D213 docstring style).
+
+## Credit
+
+This package began as `d2dtracker_interception` within Mohamed Abdelkader's
+([mzahana](https://github.com/mzahana)) D2DTracker project. D2DTracker is the
+earlier work this builds on; cite it from
+[`d2dtracker_trajectory_prediction`](https://github.com/mzahana/d2dtracker_trajectory_prediction)
+(`CITATION.cff`). Commits from before the rename keep the old name.

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>d2dtracker_interception</name>
+  <name>shaheen_guidance</name>
   <version>0.0.0</version>
-  <description>Interception Strategies for the D2DTracker Project.</description>
+  <description>Rendezvous-point and guidance strategies for drone-to-drone interception.</description>
   <maintainer email="asmalbatati@hotmail.com">asmbatati</maintainer>
   <license>MIT</license>
 

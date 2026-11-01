@@ -4,7 +4,7 @@ First step toward "Geometric Tracking and Manifold-CBF for Certified Drone
 Interception": a control-barrier-function filter that sits between any
 interception law (PN, pursuit, a learned policy) and the autopilot, and
 changes the command only as much as needed to keep the interceptor inside a
-safe set. Code: `d2dtracker_interception/safety.py`; tests:
+safe set. Code: `shaheen_guidance/safety.py`; tests:
 `test/test_safety.py`.
 
 ## Model and constraints
@@ -45,10 +45,10 @@ filter commands a return at rate `alpha * |h|`.
 
 ```bash
 # guidance node (PN or pursuit), in the benchmark scene
-ros2 launch d2dtracker_interception guidance.launch.py law:=pn cbf:=true cbf_z_min:=1.5 cbf_alpha:=1.0
+ros2 launch shaheen_guidance guidance.launch.py law:=pn cbf:=true cbf_z_min:=1.5 cbf_alpha:=1.0
 # any policy in the RL evaluation env (learned or scripted)
-ros2 run d2dtracker_rl evaluate_intercept --policy pn --cbf --target-policy evasive ...
-ros2 run d2dtracker_rl evaluate_intercept --model .../model_evasive_40k.zip --cbf ...
+ros2 run shaheen_rl evaluate_intercept --policy pn --cbf --target-policy evasive ...
+ros2 run shaheen_rl evaluate_intercept --model .../model_evasive_40k.zip --cbf ...
 ```
 
 What it is for here: the PN law flew into the ground after an overshoot in the
