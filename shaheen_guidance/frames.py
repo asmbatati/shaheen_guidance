@@ -1,4 +1,5 @@
-"""Frame helpers for MAVROS odometry (no ROS dependency, easy to unit-test).
+"""
+Frame helpers for MAVROS odometry (no ROS dependency, easy to unit-test).
 
 MAVROS publishes ``local_position/odom`` with the pose in the local ENU frame
 but the twist in the BODY frame (``child_frame_id`` base_link; see

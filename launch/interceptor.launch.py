@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Launch the interception strategy node.
+"""
+Launch the interception strategy node.
 
 Runs in the interceptor namespace (so it publishes
 ``/interceptor/intercept_point``, the topic the Behaviour Tree reads) and remaps

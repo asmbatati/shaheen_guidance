@@ -1,6 +1,6 @@
 """Unit tests for the CBF velocity safety filter."""
-from shaheen_guidance.safety import CBFVelocityFilter
 import numpy as np
+from shaheen_guidance.safety import CBFVelocityFilter
 
 
 def test_safe_command_passes_unchanged():

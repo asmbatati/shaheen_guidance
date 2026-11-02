@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Launch the Proportional-Navigation interceptor controller.
+"""
+Launch the Proportional-Navigation interceptor controller.
 
 Flies the interceptor onto the target with PN. Run this OR the BT/FSM/RL
 controller (not several at once - they share the FCU).

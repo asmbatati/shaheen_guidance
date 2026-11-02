@@ -1,4 +1,5 @@
-"""Guidance laws for interception (no ROS dependency, easy to unit-test).
+"""
+Guidance laws for interception (no ROS dependency, easy to unit-test).
 
 Proportional Navigation (PN) is the classic missile/interceptor guidance law:
 command an acceleration proportional to the line-of-sight (LOS) rotation rate,
@@ -27,7 +28,8 @@ def los_rate(rel_pos, rel_vel):
 
 def proportional_navigation(interceptor_pos, interceptor_vel,
                             target_pos, target_vel, N=3.0):
-    """Return the true-PN commanded acceleration (perpendicular to the LOS).
+    """
+    Return the true-PN commanded acceleration (perpendicular to the LOS).
 
     a_cmd = N * Vc * (omega x los_hat)
     """
@@ -44,7 +46,8 @@ def proportional_navigation(interceptor_pos, interceptor_vel,
 
 def pn_velocity_command(interceptor_pos, interceptor_vel, target_pos, target_vel,
                         vmax, N=3.0, dt=0.1, closing_speed=None):
-    """PN as a velocity setpoint for a velocity-controlled multirotor.
+    """
+    PN as a velocity setpoint for a velocity-controlled multirotor.
 
     Combines a closing component along the LOS with the PN lateral correction,
     then caps the result at ``vmax``.
@@ -80,7 +83,8 @@ def pursuit_velocity_command(interceptor_pos, target_pos, speed):
 
 def pn_integrated_velocity(v_cmd_prev, interceptor_pos, interceptor_vel,
                            target_pos, target_vel, speed, N=3.0, dt=0.1):
-    """Constant-speed PN for a velocity-controlled multirotor.
+    """
+    Constant-speed PN for a velocity-controlled multirotor.
 
     The PN acceleration (from the measured relative state) turns the
     previously COMMANDED velocity, whose magnitude is held at ``speed``:

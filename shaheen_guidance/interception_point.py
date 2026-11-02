@@ -1,4 +1,5 @@
-"""Optimal interception-point estimation.
+"""
+Optimal interception-point estimation.
 
 Given a sequence of *predicted* target states (sampled at a fixed time step)
 and the interceptor's current state, find the earliest predicted target sample
@@ -13,7 +14,8 @@ import math
 
 
 def reach_time(interceptor_state, target_position, vmax, amax):
-    """Estimate the minimum time for the interceptor to fly to a point.
+    """
+    Estimate the minimum time for the interceptor to fly to a point.
 
     Kinematic bang-bang estimate: accelerate from the current speed at ``amax``
     up to ``vmax``, then cruise. Returns time in seconds.
@@ -47,7 +49,8 @@ def time_to_intercept(interceptor_state, target_state, vmax, amax):
 
 def find_optimal_intersection(predicted_target_states, interceptor_state,
                               dt, vmax, amax):
-    """Return the earliest reachable predicted target state (the rendezvous).
+    """
+    Return the earliest reachable predicted target state (the rendezvous).
 
     ``predicted_target_states`` is an ordered list of 9-vectors sampled every
     ``dt`` seconds (index ``k`` occurs at ``t = k * dt``). The chosen state is

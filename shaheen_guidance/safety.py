@@ -1,4 +1,5 @@
-"""Control-barrier-function (CBF) safety filter for velocity commands.
+"""
+Control-barrier-function (CBF) safety filter for velocity commands.
 
 A velocity-controlled multirotor is modelled as a single integrator, p_dot = v.
 Each safety constraint is a barrier h_i(p) >= 0; the filter returns the

@@ -1,4 +1,5 @@
-"""Geometric interception-trajectory strategies.
+"""
+Geometric interception-trajectory strategies.
 
 A small library of closed-form interception manoeuvres used by the interceptor
 node. All routines operate on plain floats / lists, with no ROS dependency, so
@@ -24,7 +25,8 @@ def yaw_to_tgt(x1, y1, x2, y2):
 
 def interceptor_trajectory(xtgt, ytgt, ztgt, xint, yint, vint, vmax, amax, dt,
                            mpc_horizon_length):
-    """Algorithm 1: direct-attack trajectory toward the target.
+    """
+    Algorithm 1: direct-attack trajectory toward the target.
 
     Builds an acceleration-limited straight-line path from the interceptor
     toward the target heading, holding altitude at ``ztgt``.

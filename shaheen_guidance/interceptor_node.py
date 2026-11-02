@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Interception strategy node.
+"""
+Interception strategy node.
 
 Subscribes to the interceptor's odometry and the target's predicted path (or,
 as a fallback, the target's odometry from which a constant-velocity prediction

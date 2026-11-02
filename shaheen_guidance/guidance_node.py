@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Proportional-Navigation interceptor controller (a 'strategy' method).
+"""
+Proportional-Navigation interceptor controller (a 'strategy' method).
 
 Flies the interceptor straight onto the target using PN velocity setpoints. This
 is an alternative to the Behaviour-Tree / FSM / RL controllers - run ONE of them

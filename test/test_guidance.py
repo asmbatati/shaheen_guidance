@@ -60,7 +60,7 @@ def test_pursuit_flies_line_of_sight_at_speed():
 def _engage(law, target_vel, steps=600, dt=0.02, speed=6.0):
     """Kinematic engagement (perfect velocity tracking); returns min range."""
     from shaheen_guidance.guidance import (pn_integrated_velocity,
-                                                  pursuit_velocity_command)
+                                           pursuit_velocity_command)
     ip, tp = np.zeros(3), np.array([20.0, -10.0, 0.0])
     tv = np.asarray(target_vel, float)
     v = None
