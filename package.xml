@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>Rendezvous-point and guidance strategies for drone-to-drone interception.</description>
   <maintainer email="asmalbatati@hotmail.com">asmbatati</maintainer>
-  <license>MIT</license>
+  <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>

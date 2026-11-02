@@ -8,7 +8,7 @@ built on them. In the pluggable pipeline it is not launched as a node:
 and `head_on` planner backends. The two nodes are separate "strategy" methods
 from RUNBOOK.md (Strategy A and Strategy B).
 
-Build type: `ament_python`. License: MIT.
+Build type: `ament_python`. License: Apache-2.0.
 
 ## Library
 
