@@ -34,7 +34,7 @@ setup(
     maintainer='asmbatati',
     maintainer_email='asmalbatati@hotmail.com',
     description='Rendezvous-point and guidance strategies for drone-to-drone interception.',
-    license='MIT',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
